@@ -1,3 +1,4 @@
+
 def cislo_na_text(cislo):
     jednotky = [
         "nula", "jedna", "dva", "tři", "čtyři",
@@ -31,6 +32,3 @@ def cislo_na_text(cislo):
 cislo = input("Zadej číslo od 0 do 100: ")
 text = cislo_na_text(cislo)
 print(text)
-
-
-    
