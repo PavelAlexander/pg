@@ -1,7 +1,7 @@
 def je_tah_mozny(figura: str, start: tuple[int, int], cil: tuple[int, int], obsazene: set[tuple[int, int]]) -> bool:
     """Zjistí, zda je tah možné provést podle pravidel šachu."""
 
-    # 1. kontrola hranic šachovnice
+    # 1. hranice šachovnice
     if not (1 <= cil[0] <= 8 and 1 <= cil[1] <= 8):
         return False
 
@@ -15,7 +15,7 @@ def je_tah_mozny(figura: str, start: tuple[int, int], cil: tuple[int, int], obsa
 
     # 3. pravidla pro jednotlivé figury
     if figura == "pěšec":
-        # předpokládáme, že pěšec jde směrem nahoru (řádky rostou)
+        # řádky rostou
         if c1 == c2:
             if r1 == 2 and dr == 2 and (r1+1, c1) not in obsazene:
                 return True
@@ -28,7 +28,6 @@ def je_tah_mozny(figura: str, start: tuple[int, int], cil: tuple[int, int], obsa
 
     elif figura == "věž":
         if r1 == r2 or c1 == c2:
-            # zkontrolujeme cestu
             if r1 == r2:  # horizontální tah
                 step = 1 if c2 > c1 else -1
                 for c in range(c1+step, c2, step):
