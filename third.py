@@ -20,16 +20,3 @@ def vrat_prvocisla(maximum: int) -> list[int]:
             prvocisla.append(i)
     return prvocisla
 
-
-# testy
-print(je_prvocislo(1))     # False
-print(je_prvocislo(2))     # True
-print(je_prvocislo(3))     # True
-print(je_prvocislo(100))   # False
-print(je_prvocislo(101))   # True
-
-print(vrat_prvocisla(1))   # []
-print(vrat_prvocisla(2))   # [2]
-print(vrat_prvocisla(3))   # [2, 3]
-print(vrat_prvocisla(10))  # [2, 3, 5, 7]
-
